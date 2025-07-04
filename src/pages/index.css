@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 [data-bs-theme="dark"] {
-  --bs-body-bg: #2e2e2e;     
+  --bs-body-bg: #141416;     
   --bs-body-color: #eee;  
   --bs-primary: #ff7f50;  
   --bs-link-color: #9ecbff;
-  --bs-border-color: #444;
+  --bs-border-color: #444;  
 }
 
 [data-bs-theme="light"] {
-  --bs-body-bg: #efefef;
+  --bs-body-bg: #fff;
   --bs-body-color: #1a1a1a;
   --bs-primary: #4c8bff;
   --bs-link-color: #4c8bff;
@@ -25,7 +25,8 @@
   font-family: 'Source Sans 3', sans-serif;
 }
 
-header{
+.navbar{
+
   padding: 1.6rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.145);;
 }
@@ -85,6 +86,10 @@ header{
   height: auto;
 }
 
+.main-content{
+  padding-top: 8rem;
+}
+
 .blue-text{
   color: #407BFF;
 }
@@ -103,5 +108,18 @@ header{
 
 .font-source-sans-3{
   font-family: 'Source Sans 3', sans-serif;
+}
+
+#about-me{
+  text-align: center;
+  padding: 60px;
+}
+
+#tech img{
+    transition: transform 0.3s ease;
+}
+
+#tech img:hover{
+  transform: scale(1.05);
 }
 
