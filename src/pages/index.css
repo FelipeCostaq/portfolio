@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 [data-bs-theme="dark"] {
   --bs-body-bg: #2e2e2e;     
@@ -10,7 +11,7 @@
 }
 
 [data-bs-theme="light"] {
-  --bs-body-bg: #fefefe;
+  --bs-body-bg: #efefef;
   --bs-body-color: #1a1a1a;
   --bs-primary: #4c8bff;
   --bs-link-color: #4c8bff;
@@ -21,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 header{
@@ -88,11 +89,19 @@ header{
   color: #407BFF;
 }
 
+.black-text{
+  color: #333;
+}
+
 .font-electrolize{
   font-family: 'Electrolize', sans-serif;
 }
 
 .font-orbitron{
   font-family: 'Orbitron', sans-serif;
+}
+
+.font-source-sans-3{
+  font-family: 'Source Sans 3', sans-serif;
 }
 
