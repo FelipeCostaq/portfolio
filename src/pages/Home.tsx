@@ -4,6 +4,13 @@ import darkModeIcon from '../assets/images/dark-mode-icon.svg'
 import mainImage from '../assets/images/main-img.svg'
 import unityLightMode from '../assets/images/unity-light-mode.png'
 
+/* Import Card Images */
+import weatherForecastImage from '../assets/images/Cards/weather-forecast-image.png'
+import quickonvertImage from '../assets/images/Cards/quickonvert-logo.png'
+import generatorPassowordImage from '../assets/images/Cards/generator-password-image.png'
+
+
+
 function App() {
    const [theme, setTheme] = useState<"light" | "dark">("light")
 
@@ -107,9 +114,8 @@ function App() {
             </div>
           </div>
         </section>
-         <section className="container-fluid py-4" style={{ minHeight: '42rem', width: '100%' }}>
-          <div className="container">
-            <h1 id='about-me' className='fw-bold'>PROJETOS WEB</h1>
+        <section className="container py-5">
+          <h1 id="projects-web" className="fw-bold text-center mb-5">PROJETOS WEB</h1>
             <hr 
               style={{ 
                 width: '60px', 
@@ -121,11 +127,59 @@ function App() {
                 opacity: 1,
               }} 
             />
-            <div className="row d-flex align-items-start mt-5">
-              
+          <div className="row g-4">
+            {/* Card 1 */}
+            <div className="col-md-4">
+              <div className="card h-100 shadow-sm">
+                <img 
+                  src={weatherForecastImage} 
+                  className="card-img-top" 
+                  alt="Previsão do Tempo" 
+                  style={{ height: '200px', objectFit: 'cover' }} 
+                />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Weather Forecast</h5>
+                  <p className="card-text">Consulte o clima do sua cidade usando a API Open Weather Map.</p>
+                  <a href="https://felipecostaq.github.io/WeatherForecast/" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">Ver Projeto</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="col-md-4">
+              <div className="card h-100 shadow-sm">
+                <img 
+                  src={quickonvertImage} 
+                  className="card-img-top" 
+                  alt="Conversor de Unidades" 
+                  style={{ height: '200px', objectFit: 'cover' }} 
+                />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">QuicKonvert</h5>
+                  <p className="card-text">Várias as conversões em um só lugar. Simples e rápido.</p>
+                  <a href="https://quickonvert.netlify.app/" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="col-md-4">
+              <div className="card h-100 shadow-sm">
+                <img 
+                  src={generatorPassowordImage}
+                  className="card-img-top" 
+                  alt="Projeto Exemplo" 
+                  style={{ height: '200px', objectFit: 'cover' }} 
+                />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Gerador de Senha</h5>
+                  <p className="card-text">Um gerador de senha feito com Blazor Server.</p>
+                  <a href="https://github.com/FelipeCostaq/gerador-senha" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+      </section>
     </div>
   )
 }

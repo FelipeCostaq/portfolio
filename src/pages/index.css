@@ -115,6 +115,11 @@
   padding: 60px;
 }
 
+#projects-web{
+  text-align: center;
+  padding: 60px;
+}
+
 #tech img{
     transition: transform 0.3s ease;
 }
