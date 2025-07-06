@@ -2,12 +2,21 @@ import { useEffect, useState } from 'react'
 import './index.css'
 import darkModeIcon from '../assets/images/dark-mode-icon.svg'
 import mainImage from '../assets/images/main-img.svg'
-import unityLightMode from '../assets/images/unity-light-mode.png'
 
-/* Import Card Images */
+/* Import Cards Web Images */
 import weatherForecastImage from '../assets/images/Cards/weather-forecast-image.png'
 import quickonvertImage from '../assets/images/Cards/quickonvert-logo.png'
 import generatorPassowordImage from '../assets/images/Cards/generator-password-image.png'
+
+/* Import Cards Games Images */
+import trinitroImage from '../assets/images/Cards/trinitro-image.jpg'
+import avarusRexImage from '../assets/images/Cards/avarus-rex-image.png'
+
+
+import unityLightIcon from '../assets/images/icons/unity-light-mode.png'
+import mudblazorIcon from '../assets/images/icons/mudblazor.png'
+
+
 
 
 
@@ -106,8 +115,9 @@ function App() {
                     <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" />
                     <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
                     <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" />
-                    <img src="https://cdn.simpleicons.org/openjdk/007396" alt="Java" width={40} />
-                    <img src={theme === 'dark' ? unityLightMode : 'https://cdn.simpleicons.org/unity/000000'} alt="Unity" width={40} />
+                    <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" alt="Blazor" width="40" />
+                    <img src={mudblazorIcon} alt="MudBlazor" width="40" />
+                    <img src={theme === 'dark' ? unityLightIcon : 'https://cdn.simpleicons.org/unity/000000'} alt="Unity" width={40} />
                     <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" width="40"/>
                 </div>
               </div>
@@ -140,6 +150,23 @@ function App() {
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Weather Forecast</h5>
                   <p className="card-text">Consulte o clima do sua cidade usando a API Open Weather Map.</p>
+                  <div className="mb-3 d-flex flex-wrap gap-2">
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML" />
+                      HTML5
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/css3/1572B6" width="16" alt="CSS3" />
+                      CSS3
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="16" alt="JavaScript" />
+                      JavaScript
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      API Open Weather Map
+                    </span>
+                  </div>
                   <a href="https://felipecostaq.github.io/WeatherForecast/" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">Ver Projeto</a>
                 </div>
               </div>
@@ -156,7 +183,29 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">QuicKonvert</h5>
-                  <p className="card-text">Várias as conversões em um só lugar. Simples e rápido.</p>
+                  <p className="card-text">Várias conversões em um só lugar. Simples, rápido e útil no dia a dia.</p>
+                  <div className="mb-3 d-flex flex-wrap gap-2">
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML5" />
+                      HTML5
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                    <img src="https://cdn.simpleicons.org/css3/1572B6" width="16" alt="CSS3" />
+                      CSS3
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      C#
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" width="16" alt="Blazor" />
+                      Blazor
+                    </span>
+                      <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="" width="16" alt="MudBlazor" />
+                      MudBlazor
+                    </span>
+                  </div>
                   <a href="https://quickonvert.netlify.app/" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
                 </div>
               </div>
@@ -173,13 +222,112 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Gerador de Senha</h5>
-                  <p className="card-text">Um gerador de senha feito com Blazor Server.</p>
+                  <p className="card-text">Um gerador de senha prático desenvolvido com Blazor Server.</p>
+                  <div className="mb-3 d-flex flex-wrap gap-2">
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML5" />
+                      HTML5
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/css3/1572B6" width="16" alt="CSS3" />
+                      CSS3
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      C#
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="16" alt="JavaScript" />
+                      JavaScript
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" width="16" alt="Blazor" />
+                      Blazor
+                    </span>
+                  </div>
                   <a href="https://github.com/FelipeCostaq/gerador-senha" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
                 </div>
               </div>
             </div>
           </div>
-      </section>
+        </section>
+        <section className="container py-5">
+          <h1 id="projects-web" className="fw-bold text-center mb-5">PROJETOS UNITY</h1>
+            <hr 
+              style={{ 
+                width: '60px', 
+                height: '9px',
+                margin: '-2rem auto 8rem auto', 
+                border: '0', 
+                borderTop: '9px solid #407BFF', 
+                borderRadius: '10px',
+                opacity: 1,
+              }} 
+            />
+          <div className="row g-4">
+            {/* Card 1 */}
+            <div className="col-md-6">
+              <div className="card h-100 shadow-sm">
+                <img 
+                  src={trinitroImage} 
+                  className="card-img-top" 
+                  alt="Previsão do Tempo" 
+                  style={{ height: '350px', objectFit: 'cover'}} 
+                />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Trinitro</h5>
+                  <p className="card-text">Jogo arcade com três minigames rápidos e diversos, alinhados com a identidade da marca TNT.</p>
+                  <div className="mb-3 d-flex flex-wrap gap-2">
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/unity/FFFFFF" width="16" alt="Unity" />
+                      Unity
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      C#
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/itchdotio/FA5C5C" width="16" alt="Itch.io" />
+                      Itch.io
+                    </span>
+                  </div>
+                  <a href="https://game-soulcode.web.app/Trinitro/#home" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">Jogar</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="col-md-6">
+              <div className="card h-100 shadow-sm">
+                <img 
+                  src={avarusRexImage} 
+                  className="card-img-top" 
+                  alt="Conversor de Unidades" 
+                  style={{ height: '350px', objectFit: 'cover' }} 
+                />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Avarus Rex</h5>
+                  <p className="card-text">Avarus Rex é um jogo 2D no estilo Boss Rush que coloca você frente a frente com o Rei da Avareza, uma caveira corrompida pela ganância. </p>
+                  <div className="mb-3 d-flex flex-wrap gap-2">
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/unity/FFFFFF" width="16" alt="Unity" />
+                      Unity
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      C#
+                    </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://cdn.simpleicons.org/itchdotio/FA5C5C" width="16" alt="Itch.io" />
+                      Itch.io
+                    </span>
+                  </div>
+                  <a href="https://aragamestudio.itch.io/avarus-rex" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Jogar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
   )
 }
