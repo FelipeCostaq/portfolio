@@ -9,12 +9,13 @@ import quickonvertImage from '../assets/images/Cards/quickonvert-logo.png'
 import generatorPassowordImage from '../assets/images/Cards/generator-password-image.png'
 
 /* Import Cards Games Images */
-import trinitroImage from '../assets/images/Cards/trinitro-image.jpg'
+import trinitroImage from '../assets/images/Cards/trinitro-image.png'
 import avarusRexImage from '../assets/images/Cards/avarus-rex-image.png'
 
 
 import unityLightIcon from '../assets/images/icons/unity-light-mode.png'
 import mudblazorIcon from '../assets/images/icons/mudblazor.png'
+import csIcon from '../assets/images/icons/cs.png'
 
 
 
@@ -54,7 +55,7 @@ function App() {
                   <a className="nav-link" href="#about-me">SOBRE</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">PROJETOS</a>
+                  <a className="nav-link" href="#projects-web">PROJETOS</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">CONTATO</a>
@@ -114,7 +115,7 @@ function App() {
                     <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="40" />
                     <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" />
                     <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
-                    <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" />
+                    <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" /> 
                     <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" alt="Blazor" width="40" />
                     <img src={mudblazorIcon} alt="MudBlazor" width="40" />
                     <img src={theme === 'dark' ? unityLightIcon : 'https://cdn.simpleicons.org/unity/000000'} alt="Unity" width={40} />
@@ -195,14 +196,14 @@ function App() {
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
-                      C#
+                      .NET
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" width="16" alt="Blazor" />
                       Blazor
                     </span>
                       <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
-                      <img src="" width="16" alt="MudBlazor" />
+                      <img src={mudblazorIcon} width="16" alt="MudBlazor" />
                       MudBlazor
                     </span>
                   </div>
@@ -234,7 +235,7 @@ function App() {
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
-                      C#
+                      .NET
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="16" alt="JavaScript" />
@@ -283,7 +284,7 @@ function App() {
                       Unity
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
-                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      <img src={csIcon} width="16" alt="C#" />
                       C#
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
@@ -314,7 +315,7 @@ function App() {
                       Unity
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
-                      <img src="https://cdn.simpleicons.org/dotnet/512BD4" width="16" alt="C#" />
+                      <img src={csIcon} width="16" alt="C#" />
                       C#
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
