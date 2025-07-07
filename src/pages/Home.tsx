@@ -103,11 +103,11 @@ function App() {
               <div className="col-md-6 mb-4 mb-md-0 pe-md-5">
                 <h1 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>ME CONHEÇA</h1>
                 <p className='h5 mt-3' style={{color: 'var(--bs-text-color)'}}>
-                  Olá! Meu nome é <strong>Felipe</strong>. Tenho 17 anos e moro em São Paulo. Desde cedo, sempre fui engajado por <strong>tecnologia</strong> e <strong>programação</strong>. <br /> <br />
+                  Olá! Me chamo Felipe, tenho 17 anos e sou de São Paulo. Desde cedo, sou movido por curiosidade e paixão por tecnologia e programação. <br /> <br />
 
-                  Atualmente, estou focado no estudo do ecossistema <strong>.NET</strong>, explorando as possibilidades que ele oferece para o desenvolvimento de inúmeras aplicações. <br /> <br />
+                  Atualmente, estou me aprofundando em desenvolvimento web, utilizando <strong>Blazor (C#)</strong> e <strong>JavaScript</strong> no front-end, além de <strong>Node.js</strong> e <strong>ASP.NET Web API</strong> para criação de APIs e integração com o back-end. <br /> <br />
 
-                  Meu objetivo é me especializar como desenvolvedor <strong>Web</strong> e <strong>Unity</strong>, contribuindo para projetos. Estou em busca de mais aprendizado e aprimoramento das minhas habilidades.
+                  Também estou desenvolvendo habilidades em <strong>Unity</strong>, com foco em projetos de jogos 2D. Meu objetivo é contribuir para projetos reais e desafiadores.
                 </p>
               </div>
               <div className="col-md-6 ps-md-5">
@@ -117,6 +117,7 @@ function App() {
                     <img src={cssIcon} alt="CSS3" width="40"/>
                     <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="40" />
                     <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" />
+                    <img src="https://static.cdnlogo.com/logos/n/22/nodejs.svg" alt="NodeJs" width="40" />
                     <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
                     <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" /> 
                     <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" alt="Blazor" width="40" />
@@ -166,6 +167,10 @@ function App() {
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="16" alt="JavaScript" />
                       JavaScript
+                    </span>
+                      <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://static.cdnlogo.com/logos/n/22/nodejs.svg" width="16" alt="NodeJS" />
+                      Node.js
                     </span>
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       API Open Weather Map
