@@ -4,12 +4,13 @@
 
 
 [data-bs-theme="dark"] {
-  --bs-body-bg: #333;          
+  --bs-body-bg: #212529;          
   --bs-body-color: #c9d1d9;     
   --bs-primary: #58a6ff;           
   --bs-link-color: #79c0ff;       
   --bs-border-color: #30363d;
-  --bs-text-color: #fff; 
+  --bs-text-color: #fff;
+  --bs-body-footer-color: #2B3035;
 }
 
 [data-bs-theme="light"] {
@@ -19,6 +20,7 @@
   --bs-link-color: #4c8bff;
   --bs-border-color: #ccc;
   --bs-text-color: #323232;
+  --bs-body-footer-color: #212529;
 }
 
 *{

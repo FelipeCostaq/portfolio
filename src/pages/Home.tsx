@@ -34,6 +34,7 @@ function App() {
       setTheme(prev => (prev === "dark" ? "light" : "dark"))
     }
 
+
   return (
     <div>
       <header>
@@ -60,7 +61,7 @@ function App() {
                   <a className="nav-link" href="#projects-web" style={{color: 'var(--bs-text-color)'}}>PROJETOS</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#" style={{color: 'var(--bs-text-color)'}}>CONTATO</a>
+                  <a className="nav-link" href="#contact" style={{color: 'var(--bs-text-color)'}}>CONTATO</a>
                 </li>
                 <li>
                   <button className='button-dark-mode' onClick={toggleTheme}><img src={theme === 'dark' ? lightModeIcon : darkModeIcon} alt="Icon Dark Mode" /></button>
@@ -331,7 +332,64 @@ function App() {
             </div>
           </div>
         </section>
+        <div id='contact' className='container py-5 mt-5'>
+        </div>
+        <div className="container py-5 " style={{ maxWidth: '700px' }}>
+          <h2 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>CONTATO</h2>
+          <form>
+            <div className="mb-3">
+              <label htmlFor="nome" className="form-label">
+                Nome
+              </label>
+              <input type="text" className="form-control" id="nome" placeholder="Digite seu nome" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
+              <input type="email" className="form-control" id="email" placeholder="exemplo@email.com" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="mensagem" className="form-label">
+                Mensagem
+              </label>
+              <textarea className="form-control" id="mensagem" rows={4} placeholder="Digite sua mensagem"></textarea>
+            </div>
+            
+            <button type="submit" className="btn btn-primary w-100">
+              Enviar
+            </button>
+            
+            <p className='mt-3'>Ou me mande um email diretamente! <a href="mailto:felipecostasiqu@gmail.com">felipecostasiqu@gmail.com</a></p>
+          </form>
+        </div>
+        <div className='container py-5 mt-5'>
+        </div>
+        <footer className="text-light py-5" style={{backgroundColor: 'var(--bs-body-footer-color)'}}>
+          <div className="container d-flex justify-content-between align-items-center">
+            <span>&copy; 2025 Felipe Costa. Todos os direitos reservados.</span>
+            <div>
+              <a
+                href="https://github.com/FelipeCostaq"
+                className="text-light me-3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              <i className="bi bi-github" style={{ fontSize: '2rem' }}></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/felipecostasiq/"
+              className="text-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-linkedin" style={{ fontSize: '2rem' }}></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
+    
   )
 }
 
