@@ -133,4 +133,9 @@
   transform: scale(1.05);
 }
 
+#div-title{
+  background-color: black;
+  width: 10%;
+  height: 100%;
+}
 

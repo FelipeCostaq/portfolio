@@ -72,7 +72,7 @@ function App() {
       <header>
         <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">Logo here!</a>
+            <a className="navbar-brand" href="#">Felipe C.</a>
             <button
               className="navbar-toggler"
               type="button"
