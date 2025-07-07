@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
-
+import axios from 'axios';
 
 
 
@@ -37,6 +37,34 @@ function App() {
     const toggleTheme = () => {
       setTheme(prev => (prev === "dark" ? "light" : "dark"))
     }
+
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      message: ''
+    })
+
+
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
+      setFormData({ ...formData, [e.target.id]: e.target.value})
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      try{
+        const response = await axios.post('https://sendemailapi-y7yd.onrender.com/Email/send', formData);
+
+        if(response.status === 200){
+         
+          setFormData({name: '', email: '', message: ''});
+        }
+      }catch( error:unknown ){
+        console.error(error);
+      }
+      }
+    
 
 
   return (
@@ -344,24 +372,24 @@ function App() {
         </div>
         <div className="container py-5 " style={{ maxWidth: '700px' }}>
           <h2 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>CONTATO</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="nome" className="form-label">
+              <label htmlFor="name" className="form-label">
                 Nome
               </label>
-              <input type="text" className="form-control" id="nome" placeholder="Digite seu nome" />
+              <input type="text" className="form-control" id="name" placeholder="Digite seu nome" value={formData.name} onChange={handleChange} required/>
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email
               </label>
-              <input type="email" className="form-control" id="email" placeholder="exemplo@email.com" />
+              <input type="email" className="form-control" id="email" placeholder="exemplo@email.com" value={formData.email} onChange={handleChange} required/>
             </div>
             <div className="mb-3">
-              <label htmlFor="mensagem" className="form-label">
+              <label htmlFor="message" className="form-label">
                 Mensagem
               </label>
-              <textarea className="form-control" id="mensagem" rows={4} placeholder="Digite sua mensagem"></textarea>
+              <textarea className="form-control" id="message" rows={4} placeholder="Digite sua mensagem" value={formData.message} onChange={handleChange} required></textarea>
             </div>
             
             <button type="submit" className="btn btn-primary w-100">
