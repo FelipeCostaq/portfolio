@@ -1,5 +1,9 @@
-import { useEffect, useState } from 'react'
-import './index.css'
+import { useEffect, useState } from 'react';
+import './index.css';
+
+
+
+
 import mainImage from '../assets/images/main-img.svg'
 
 /* Import Cards Web Images */
