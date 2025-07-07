@@ -108,7 +108,7 @@ function App() {
           <div className="row align-items-center g-5">
             <div className="col-md-7 pe-md-5">
               <h1 className='display-3 blue-text font-electrolize fw-bold mb-3'>Desenvolvedor Web e Unity<span style={{color: 'var(--bs-text-color)'}}>.</span></h1>
-              <p className='h5 font-source-sans-3 fw-normal ' style={{color: 'var(--bs-text-color)'}}>Olá, meu nome é Felipe. Sou um estudante, estou focado em aprender <span className='blue-text fw-bold'>C#</span>,<br /> <span className='blue-text fw-bold'>Unity</span> e o ecossistema <span className='blue-text fw-bold'>.NET</span></p>
+              <p className='h5 font-source-sans-3 fw-normal ' style={{color: 'var(--bs-text-color)'}}>Olá, meu nome é Felipe. Sou desenvolvedor web crio interfaces usando <span className='blue-text fw-bold'>React</span> e <span className='blue-text fw-bold'>Blazor</span> e APIs usando C# e Node.js. Também desenvolvo jogos na <span className='blue-text fw-bold'>Unity</span>.</p>
               <p className='h5 blue-text font-orbitron fw-bold mt-4'>Estou sempre<br></br> buscando aprender.</p>
             </div>
             <div className="col-md-5 text-center">
