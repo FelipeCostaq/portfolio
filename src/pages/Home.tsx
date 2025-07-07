@@ -116,7 +116,6 @@ function App() {
                     <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="40"/>
                     <img src={cssIcon} alt="CSS3" width="40"/>
                     <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="40" />
-                    <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" width="40" />
                     <img src="https://static.cdnlogo.com/logos/n/22/nodejs.svg" alt="NodeJs" width="40" />
                     <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
                     <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" /> 
