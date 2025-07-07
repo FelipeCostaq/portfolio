@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+
 [data-bs-theme="dark"] {
-  --bs-body-bg: #141416;     
-  --bs-body-color: #eee;  
-  --bs-primary: #ff7f50;  
-  --bs-link-color: #9ecbff;
-  --bs-border-color: #444;  
+  --bs-body-bg: #333;          
+  --bs-body-color: #c9d1d9;     
+  --bs-primary: #58a6ff;           
+  --bs-link-color: #79c0ff;       
+  --bs-border-color: #30363d;
+  --bs-text-color: #fff; 
 }
 
 [data-bs-theme="light"] {
@@ -16,6 +18,7 @@
   --bs-primary: #4c8bff;
   --bs-link-color: #4c8bff;
   --bs-border-color: #ccc;
+  --bs-text-color: #323232;
 }
 
 *{
