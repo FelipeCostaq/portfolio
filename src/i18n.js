@@ -51,7 +51,7 @@ i18n
 
           sectionUnityTitleText: "UNITY PROJECTS",
 
-          cardTrinitroDescription: "Arcade game with three quick and diverse minigames, in line with the TNT brand identity.",
+          cardTrinitroDescription: "Arcade game with three quick and diverse minigames, in line with the TNT Energy Drink brand identity.",
 
           cardAvarusRexDescription: "Avarus Rex is a 2D Boss Rush-style game that brings you face to face with the King of Avarice, a skull corrupted by greed.",
 
@@ -117,7 +117,7 @@ i18n
 
           sectionUnityTitleText: "PROJETOS UNITY",
 
-          cardTrinitroDescription: "Jogo arcade com três minigames rápidos e diversos, alinhados com a identidade da marca TNT.",
+          cardTrinitroDescription: "Jogo arcade com três minigames rápidos e diversos, alinhados com a identidade da marca TNT Energy Drink.",
 
           cardAvarusRexDescription: "Avarus Rex é um jogo 2D no estilo Boss Rush que coloca você frente a frente com o Rei da Avareza, uma caveira corrompida pela ganância.",
 
