@@ -27,7 +27,7 @@ Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidad
 👉 [API Send Email](https://github.com/FelipeCostaq/SendEmailApi/)
 
 ### Outros
-- [![Netlify Status](https://api.netlify.com/api/v1/badges/545ef98f-59cf-486d-b332-0951d05f81f4/deploy-status)](https://app.netlify.com/sites/545ef98f-59cf-486d-b332-0951d05f81f4/deploys)
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/545ef98f-59cf-486d-b332-0951d05f81f4/deploy-status)](https://portfolio-felipecosta.netlify.app/)
 - ![Git](https://img.shields.io/badge/versionamento-Git-%23F05033?logo=git&logoColor=white)
 
 ## 💼 O que você encontrará no portfólio
