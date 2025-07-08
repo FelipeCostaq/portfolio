@@ -190,6 +190,7 @@ function App() {
                     <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" width="40" />
                     <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" width="40" /> 
                     <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" alt="Blazor" width="40" />
+                    <img src="https://logo.svgcdn.com/l/webassembly.svg" alt="Wasm" width="40" />
                     <img src={mudblazorIcon} alt="MudBlazor" width="40" />
                     <img src={theme === 'dark' ? unityLightIcon : 'https://cdn.simpleicons.org/unity/000000'} alt="Unity" width={40} />
                     <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" width="40"/>
@@ -279,6 +280,11 @@ function App() {
                       <img src="https://static.cdnlogo.com/logos/b/67/blazor.svg" width="16" alt="Blazor" />
                       Blazor
                     </span>
+                    <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
+                      <img src="https://logo.svgcdn.com/l/webassembly.svg" width="16" alt="Wasm" />
+                      Wasm
+                    </span>
+                    
                       <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src={mudblazorIcon} width="16" alt="MudBlazor" />
                       MudBlazor
