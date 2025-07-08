@@ -103,7 +103,7 @@ i18n
 
           sectionWebTitleText: "PROJETOS WEB",
           
-          cardWeatherForecastDescription: "Consulte o clima do sua cidade usando a API Open Weather Map.",
+          cardWeatherForecastDescription: "Consulte o clima da sua cidade usando a API Open Weather Map.",
 
           cardQuicKonvertDescription: "Várias conversões em um só lugar. Simples, rápido e útil no dia a dia.",
 
