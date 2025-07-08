@@ -38,10 +38,10 @@ Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidad
 - **Multilinguagem** — Suporte para português e inglês.
 - **Dark Mode** — Alternância automática de tema com base no sistema do usuário.
 
-## 📸 
+## 📸
 
 <a href="https://portfolio-felipecosta.netlify.app/">
-  <img height="425" width="800" src="" alt="Imagem do Portfolio">
+  <img height="425" width="800" src="https://github.com/FelipeCostaq/portfolio/blob/main/portfolio-main-image.png?raw=true" alt="Imagem do Portfolio">
 <a/>
 
 
