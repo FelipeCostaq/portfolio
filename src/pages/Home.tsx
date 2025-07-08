@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import './index.css';
 import axios from 'axios';
+import '../i18n'
+import { Trans } from 'react-i18next'
 
 
 
@@ -22,7 +24,11 @@ import csIcon from '../assets/images/icons/cs.png'
 import cssIcon from '../assets/images/icons/css3.png'
 import darkModeIcon from '../assets/images/icons/dark-mode-icon.svg'
 import lightModeIcon from '../assets/images/icons/light-mode-icon.png'
+import { useTranslation } from 'react-i18next';
 
+/* FLAGS */
+import flagBrasilIcon from '../assets/images/flags/flagBrasil.svg'
+import flagUKIcon from '../assets/images/flags/flagUK.svg'
 
 
 
@@ -37,6 +43,22 @@ function App() {
     const toggleTheme = () => {
       setTheme(prev => (prev === "dark" ? "light" : "dark"))
     }
+
+    const { t, i18n } = useTranslation()
+
+    useEffect(() => {
+      setCurrentLang(i18n.language);
+    }, [i18n.language]);
+
+    const [currentLang, setCurrentLang] = useState(i18n.language);
+
+    const toggleLanguage = () => {
+      const newLang = i18n.language === 'en' ? 'pt' : 'en';
+      i18n.changeLanguage(newLang)
+      setCurrentLang(newLang); 
+    }
+
+
 
     const [formData, setFormData] = useState({
       name: '',
@@ -87,16 +109,19 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                <a className="nav-link" href="#about-me" style={{color: 'var(--bs-text-color)'}}>SOBRE</a>
+                <a className="nav-link" href="#about-me" style={{color: 'var(--bs-text-color)'}}>{t('headerAboutText')}</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#projects-web" style={{color: 'var(--bs-text-color)'}}>PROJETOS</a>
+                  <a className="nav-link" href="#projects-web" style={{color: 'var(--bs-text-color)'}}>{t('headerProjectsText')}</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact" style={{color: 'var(--bs-text-color)'}}>CONTATO</a>
+                  <a className="nav-link" href="#contact" style={{color: 'var(--bs-text-color)'}}>{t('headerContactText')}</a>
                 </li>
                 <li>
                   <button className='button-dark-mode' onClick={toggleTheme}><img src={theme === 'dark' ? lightModeIcon : darkModeIcon} alt="Icon Dark Mode" /></button>
+                  <button id='button-flag' onClick={toggleLanguage}>
+                    <img id='flag' src={currentLang === 'pt' ? flagUKIcon : flagBrasilIcon} alt="Flag" />
+                  </button>
                 </li>
               </ul>
             </div>
@@ -107,9 +132,16 @@ function App() {
         <div className="container py-5 mt-5"> 
           <div className="row align-items-center g-5">
             <div className="col-md-7 pe-md-5">
-              <h1 className='display-3 blue-text font-electrolize fw-bold mb-3'>Desenvolvedor Web e Unity<span style={{color: 'var(--bs-text-color)'}}>.</span></h1>
-              <p className='h5 font-source-sans-3 fw-normal ' style={{color: 'var(--bs-text-color)'}}>Olá, meu nome é Felipe. Sou desenvolvedor web crio interfaces usando <span className='blue-text fw-bold'>React</span> e <span className='blue-text fw-bold'>Blazor</span> e APIs usando C# e Node.js. Também desenvolvo jogos na <span className='blue-text fw-bold'>Unity</span>.</p>
-              <p className='h5 blue-text font-orbitron fw-bold mt-4'>Estou sempre<br></br> buscando aprender.</p>
+              <h1 className='display-3 blue-text font-electrolize fw-bold mb-3'>{t('mainTitleText')}<span style={{color: 'var(--bs-text-color)'}}>.</span></h1>
+              <p className='h5 font-source-sans-3 fw-normal'>
+                <Trans i18nKey="mainAboutText">
+                  Olá, meu nome é Felipe. Sou desenvolvedor web, crio interfaces usando
+                  <span className="blue-text fw-bold">React</span> e
+                  <span className="blue-text fw-bold">Blazor</span> e APIs usando C# e Node.js.
+                  Também desenvolvo jogos na <span className="blue-text fw-bold">Unity</span>.
+                </Trans>
+              </p>
+              <p className='h5 blue-text font-orbitron fw-bold mt-4'>{t("mainAsidePart1Text")}<br></br> {t("mainAsidePart2Text")}</p>
             </div>
             <div className="col-md-5 text-center">
               <img src={mainImage} alt="Ilustração Principal" className="img-fluid p-4 " id='main-image'/>
@@ -119,7 +151,7 @@ function App() {
       </main>
         <section className="container-fluid py-4" style={{ minHeight: '43rem', width: '100%' }}>
           <div className="container">
-            <h1 id='about-me' className='fw-bold' style={{color: 'var(--bs-text-color)'}}>SOBRE MIM</h1>
+            <h1 id='about-me' className='fw-bold' style={{color: 'var(--bs-text-color)'}}>{t("sectionAboutTitleText")}</h1>
             <hr 
               style={{ 
                 width: '60px', 
@@ -133,17 +165,23 @@ function App() {
             />
             <div className="row d-flex align-items-start mt-5">
               <div className="col-md-6 mb-4 mb-md-0 pe-md-5">
-                <h1 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>ME CONHEÇA</h1>
-                <p className='h5 mt-3' style={{color: 'var(--bs-text-color)'}}>
-                  Olá! Me chamo Felipe, tenho 17 anos e sou de São Paulo. Desde cedo, sou movido por curiosidade e paixão por tecnologia e programação. <br /> <br />
-
-                  Atualmente, estou me aprofundando em desenvolvimento web, utilizando <strong>Blazor (C#)</strong> e <strong>JavaScript</strong> no front-end, além de <strong>Node.js</strong> e <strong>ASP.NET Web API</strong> para criação de APIs e integração com o back-end. <br /> <br />
-
-                  Também estou desenvolvendo habilidades em <strong>Unity</strong>, com foco em projetos de jogos 2D. Meu objetivo é contribuir para projetos reais e desafiadores.
+                <h1 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>{t("sectionAboutKnowTitleText")}</h1>
+                <p className="h5" style={{ color: 'var(--bs-text-color)' }}>
+                <Trans
+                  i18nKey="sectionAboutKnowText"
+                  components={[
+                    <br key="br1" />,
+                    <strong key="strong1" />,
+                    <strong key="strong2" />,
+                    <strong key="strong3" />,
+                    <strong key="strong4" />,
+                    <strong key="strong5" />
+                  ]}
+                />
                 </p>
               </div>
               <div className="col-md-6 ps-md-5">
-                <h1 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>TECNOLOGIAS</h1>
+                <h1 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>{t("sectionAboutTechTitleText")}</h1>
                 <div className="d-flex flex-wrap gap-3" id='tech'>
                     <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="40"/>
                     <img src={cssIcon} alt="CSS3" width="40"/>
@@ -161,7 +199,7 @@ function App() {
           </div>
         </section>
         <section className="container py-5">
-          <h1 id="projects-web" className="fw-bold text-center mb-5" style={{color: 'var(--bs-text-color)'}}>PROJETOS WEB</h1>
+          <h1 id="projects-web" className="fw-bold text-center mb-5" style={{color: 'var(--bs-text-color)'}}>{t("sectionWebTitleText")}</h1>
             <hr 
               style={{ 
                 width: '60px', 
@@ -185,7 +223,7 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Weather Forecast</h5>
-                  <p className="card-text">Consulte o clima do sua cidade usando a API Open Weather Map.</p>
+                  <p className="card-text">{t("cardWeatherForecastDescription")}</p>
                   <div className="mb-3 d-flex flex-wrap gap-2">
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML" />
@@ -207,7 +245,7 @@ function App() {
                       API Open Weather Map
                     </span>
                   </div>
-                  <a href="https://felipecostaq.github.io/WeatherForecast/" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">Ver Projeto</a>
+                  <a href="https://felipecostaq.github.io/WeatherForecast/" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">{t("cardWebButton")}</a>
                 </div>
               </div>
             </div>
@@ -223,7 +261,7 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">QuicKonvert</h5>
-                  <p className="card-text">Várias conversões em um só lugar. Simples, rápido e útil no dia a dia.</p>
+                  <p className="card-text">{t("cardQuicKonvertDescription")}</p>
                   <div className="mb-3 d-flex flex-wrap gap-2">
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML5" />
@@ -246,7 +284,7 @@ function App() {
                       MudBlazor
                     </span>
                   </div>
-                  <a href="https://quickonvert.netlify.app/" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
+                  <a href="https://quickonvert.netlify.app/" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>{t("cardWebButton")}</a>
                 </div>
               </div>
             </div>
@@ -261,8 +299,8 @@ function App() {
                   style={{ height: '200px', objectFit: 'cover' }} 
                 />
                 <div className="card-body d-flex flex-column">
-                  <h5 className="card-title">Gerador de Senha</h5>
-                  <p className="card-text">Um gerador de senha prático desenvolvido com Blazor Server.</p>
+                  <h5 className="card-title">{t("cardGeneratorPasswordTitle")}</h5>
+                  <p className="card-text">{t("cardGeneratorPasswordDescription")}</p>
                   <div className="mb-3 d-flex flex-wrap gap-2">
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/html5/E34F26" width="16" alt="HTML5" />
@@ -285,14 +323,14 @@ function App() {
                       Blazor
                     </span>
                   </div>
-                  <a href="https://github.com/FelipeCostaq/gerador-senha" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Ver Projeto</a>
+                  <a href="https://github.com/FelipeCostaq/gerador-senha" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>{t("cardWebButton")}</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section className="container py-5">
-          <h1 id="projects-web" className="fw-bold text-center mb-5" style={{color: 'var(--bs-text-color)'}}>PROJETOS UNITY</h1>
+          <h1 id="projects-web" className="fw-bold text-center mb-5" style={{color: 'var(--bs-text-color)'}}>{t("sectionUnityTitleText")}</h1>
             <hr 
               style={{ 
                 width: '60px', 
@@ -316,7 +354,7 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Trinitro</h5>
-                  <p className="card-text">Jogo arcade com três minigames rápidos e diversos, alinhados com a identidade da marca TNT.</p>
+                  <p className="card-text">{t("cardTrinitroDescription")}</p>
                   <div className="mb-3 d-flex flex-wrap gap-2">
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/unity/FFFFFF" width="16" alt="Unity" />
@@ -331,7 +369,7 @@ function App() {
                       Itch.io
                     </span>
                   </div>
-                  <a href="https://game-soulcode.web.app/Trinitro/#home" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">Jogar</a>
+                  <a href="https://game-soulcode.web.app/Trinitro/#home" target='_blank' rel='noopener noreferrer' className="btn btn-primary mt-auto">{t("cardUnityButton")}</a>
                 </div>
               </div>
             </div>
@@ -347,7 +385,7 @@ function App() {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Avarus Rex</h5>
-                  <p className="card-text">Avarus Rex é um jogo 2D no estilo Boss Rush que coloca você frente a frente com o Rei da Avareza, uma caveira corrompida pela ganância. </p>
+                  <p className="card-text">{t("cardAvarusRexDescription")}</p>
                   <div className="mb-3 d-flex flex-wrap gap-2">
                     <span className="d-flex align-items-center gap-1 badge rounded-pill text-bg-dark">
                       <img src="https://cdn.simpleicons.org/unity/FFFFFF" width="16" alt="Unity" />
@@ -362,7 +400,7 @@ function App() {
                       Itch.io
                     </span>
                   </div>
-                  <a href="https://aragamestudio.itch.io/avarus-rex" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>Jogar</a>
+                  <a href="https://aragamestudio.itch.io/avarus-rex" className="btn btn-primary mt-auto" target='_blank' rel='noopener noreferrer'>{t("cardUnityButton")}</a>
                 </div>
               </div>
             </div>
@@ -371,39 +409,39 @@ function App() {
         <div id='contact' className='container py-5 mt-5'>
         </div>
         <div className="container py-5 " style={{ maxWidth: '700px' }}>
-          <h2 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>CONTATO</h2>
+          <h2 className="mb-3 fw-bold" style={{color: 'var(--bs-text-color)'}}>{t("sectionContactTitleText")}</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
-                Nome
+                {t("sectionContactNameLabel")}
               </label>
-              <input type="text" className="form-control" id="name" placeholder="Digite seu nome" value={formData.name} onChange={handleChange} required/>
+              <input type="text" className="form-control" id="name" placeholder={t("sectionContactNamePlaceholder")} value={formData.name} onChange={handleChange} required/>
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email
               </label>
-              <input type="email" className="form-control" id="email" placeholder="exemplo@email.com" value={formData.email} onChange={handleChange} required/>
+              <input type="email" className="form-control" id="email" placeholder={t("sectionContactEmailPlaceholder")} value={formData.email} onChange={handleChange} required/>
             </div>
             <div className="mb-3">
               <label htmlFor="message" className="form-label">
-                Mensagem
+                {t("sectionContactMessageLabel")}
               </label>
-              <textarea className="form-control" id="message" rows={4} placeholder="Digite sua mensagem" value={formData.message} onChange={handleChange} required></textarea>
+              <textarea className="form-control" id="message" rows={4} placeholder={t("sectionContactMessagePlaceholder")} value={formData.message} onChange={handleChange} required></textarea>
             </div>
             
             <button type="submit" className="btn btn-primary w-100">
-              Enviar
+              {t("contactSubmitButton")}
             </button>
             
-            <p className='mt-3'>Ou me mande um email diretamente! <a href="mailto:felipecostasiqu@gmail.com">felipecostasiqu@gmail.com</a></p>
+            <p className='mt-3'>{t("sectionContactAsideText")}<a href="mailto:felipecostasiqu@gmail.com">felipecostasiqu@gmail.com</a></p>
           </form>
         </div>
         <div className='container py-5 mt-5'>
         </div>
         <footer className="text-light py-5" style={{backgroundColor: 'var(--bs-body-footer-color)'}}>
           <div className="container d-flex justify-content-between align-items-center">
-            <span>&copy; 2025 Felipe Costa. Todos os direitos reservados.</span>
+            <span>&copy; 2025 Felipe Costa. {t("footerMessage")}</span>
             <div>
               <a
                 href="https://github.com/FelipeCostaq"
