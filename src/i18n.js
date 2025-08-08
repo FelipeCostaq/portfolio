@@ -21,7 +21,7 @@ i18n
           /* MAIN */
 
           mainTitleText: "Web and Unity Developer",
-          mainAboutText: "Hello, my name is Felipe. I’m a web developer — I build interfaces with <1>React</1> and <3>Blazor</3> and APIs using C# and Node.js. I also develop games with <5>Unity</5>.",
+          mainAboutText: "Hello, my name is Felipe. I’m a web developer — I build interfaces with <1>React</1> and <3>Blazor</3> and APIs using ASP.NET. I also develop games with <5>Unity</5>.",
           mainAsidePart1Text: "I'm always",
           mainAsidePart2Text: "looking to learn",
 
@@ -88,7 +88,7 @@ i18n
           /* MAIN */
 
           mainTitleText: "Desenvolvedor Web e Unity",
-          mainAboutText: "Olá, meu nome é Felipe. Sou desenvolvedor web, crio interfaces usando <1>React</1> e <3>Blazor</3> e APIs usando C# e Node.js. Também desenvolvo jogos na <5>Unity</5>.",
+          mainAboutText: "Olá, meu nome é Felipe. Sou desenvolvedor web, crio interfaces usando <1>React</1> e <3>Blazor</3> e APIs usando ASP.NET. Também desenvolvo jogos na <5>Unity</5>.",
           mainAsidePart1Text: "Estou sempre",
           mainAsidePart2Text: "buscando aprender",
 
