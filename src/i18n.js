@@ -87,7 +87,7 @@ i18n
 
           /* MAIN */
 
-          mainTitleText: "Desenvolvedor Back-end e Unity",
+          mainTitleText: "Desenvolvedor <br> Back-end e Unity",
           mainAboutText: "Olá, meu nome é Felipe. Sou desenvolvedor web, crio interfaces usando <1>React</1> e <3>Blazor</3> e APIs usando ASP.NET. Também desenvolvo jogos na <5>Unity</5>.",
           mainAsidePart1Text: "Estou sempre",
           mainAsidePart2Text: "buscando aprender",
