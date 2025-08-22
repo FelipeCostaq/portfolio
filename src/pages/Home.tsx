@@ -132,7 +132,12 @@ function App() {
         <div className="container py-5 mt-5"> 
           <div className="row align-items-center g-5">
             <div className="col-md-7 pe-md-5">
-              <h1 className='display-3 blue-text font-electrolize fw-bold mb-3'>{t('mainTitleText')}<span style={{color: 'var(--bs-text-color)'}}>.</span></h1>
+              <h1 className='display-3 blue-text font-electrolize fw-bold mb-3'>
+                <Trans i18nKey="mainTitleText">
+                  
+                </Trans>
+                <span style={{color: 'var(--bs-text-color)'}}>.</span>
+              </h1>
               <p className='h5 font-source-sans-3 fw-normal'>
                 <Trans i18nKey="mainAboutText">
                   Olá, meu nome é Felipe. Sou desenvolvedor web, crio interfaces usando
